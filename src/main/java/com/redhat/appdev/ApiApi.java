@@ -23,6 +23,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.validation.Valid;
 import javax.validation.constraints.*;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2020-04-08T13:34:57.043-03:00[America/Argentina/Buenos_Aires]")
@@ -60,7 +62,7 @@ public interface ApiApi {
                         exampleString = "{ \"provincia\": \"Buenos Aires\" }";
                     }                    
                     //ApiUtil.setExampleResponse(request, "application/json", exampleString);
-                    List<String> result = new ArraList();
+                    List<String> result = new ArrayList<String>();
                     result.add(exampleString);
                     ResponseEntity.ok().body(result);
                     break;
