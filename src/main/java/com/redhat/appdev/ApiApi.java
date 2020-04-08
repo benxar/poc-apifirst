@@ -61,10 +61,9 @@ public interface ApiApi {
                     if (idProvincia.equals("2")) {
                         exampleString = "{ \"provincia\": \"Buenos Aires\" }";
                     }                    
-                    //ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     List<String> result = new ArrayList<String>();
                     result.add(exampleString);
-                    ResponseEntity.ok().body(result);
+                    ApiUtil.setExampleResponse(request, "application/json", result);
                     break;
                 }
             }
