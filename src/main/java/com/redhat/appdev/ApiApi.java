@@ -57,7 +57,7 @@ public interface ApiApi {
                         exampleString = "{ \"provincia\": \"CABA\" }";
                     } 
                     if (idProvincia.equals("2")) {
-                        exampleString = "{ \"provincia\": \"CABA\" }";
+                        exampleString = "{ \"provincia\": \"Buenos Aires\" }";
                     }                    
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
