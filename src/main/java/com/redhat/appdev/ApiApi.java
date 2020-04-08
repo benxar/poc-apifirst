@@ -54,10 +54,10 @@ public interface ApiApi {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
                     String exampleString = null;
                     if (idProvincia.equals("1")) {
-                        exampleString = "{ 'provincia': 'CABA' }";
+                        exampleString = "{ \"provincia\": \"CABA\" }";
                     } 
                     if (idProvincia.equals("2")) {
-                        exampleString = "{ 'provincia': 'Buenos Aires' }";
+                        exampleString = "{ \"provincia\": \"CABA\" }";
                     }                    
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
