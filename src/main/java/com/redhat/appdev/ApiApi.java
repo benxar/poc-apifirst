@@ -24,7 +24,6 @@ import org.springframework.web.multipart.MultipartFile;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2020-04-08T13:34:57.043-03:00[America/Argentina/Buenos_Aires]")
 
@@ -53,7 +52,13 @@ public interface ApiApi {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
                 if (mediaType.isCompatibleWith(MediaType.valueOf("application/json"))) {
-                    String exampleString = "null";
+                    String exampleString = null;
+                    if (idProvincia.equals("1")) {
+                        exampleString = "CABA";
+                    } 
+                    if (idProvincia.equals("2")) {
+                        exampleString = "Buenos Aires";
+                    }                    
                     ApiUtil.setExampleResponse(request, "application/json", exampleString);
                     break;
                 }
